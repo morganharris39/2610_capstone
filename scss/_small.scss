@@ -1,0 +1,101 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center;
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+    }
+} // end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        font-size: 1.5rem;
+    }
+    p {
+        line-height: $leading;
+    }
+}// end main
+
+.hero {
+    position: relative;
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0) 90%);
+        > h2 {
+            font-size: 1.7rem;
+            margin: 1.5rem 0 0.3rem 0;
+        }
+        p {
+            padding-top: 0;
+            font-size: 1.2rem;
+            margin: 0.4rem 0;
+        }
+        > h2, p {
+            color: white;
+            padding-left: 1rem;
+        }
+    }
+}// end hero
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: grey;
+} // end footer wrapper
+
+footer {
+    padding: 1rem $gutter;
+    text-align: center;
+    line-height: $leading;
+}// end footer

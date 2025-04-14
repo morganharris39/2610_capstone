@@ -23,7 +23,7 @@ body {
 /* --------------------------- HEADER --------------------------- */
 header {
     display: grid;
-    grid-template-columns: 50px auto;
+    grid-template-columns: 50px auto 44px;
     column-gap: $gutter;
     align-items: center;
     padding: .5rem $gutter;
@@ -35,17 +35,73 @@ header {
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 
+#navWrapper {
+    background-color: white;
+}
 
+#hamburgerBtn {
+    position: relative;
+    height: 44px;
+    width: 44px;
+    cursor: pointer;
 
+    .top, .bottom {
+        position: absolute;
+        height: 3px;
+        width: 50%;
+        left: 25%;
+        background-color: black;
+        transition: all .3s ease;
+    }
 
+    .top {
+        top: 33%;
+    }
 
+    .bottom {
+        top: 62%
+    }
+} // end hamburg menu
 
+#hamburgerBtn.open {
 
+    .top {
+        transform: rotate(45deg);
+        top: 48%;
+        width: 60%;
+        left: 20%;
+    }
 
+    .bottom {
+        transform: rotate(-45deg);
+        top: 48%;
+        width: 60%;
+        left: 20%;
+    }
+}
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
 
+    li a {
+        color: black;
+        display: block;
+        padding: 0.75rem $gutter;
+        text-decoration: none;
+        border-bottom: 1px solid $greyColor;
+    }
 
+    li.active a {
+        color: red;
+    }
+} // end nav
 
+nav ul.open {
+    display: block;
+}
 
 
 /* --------------------------- MAIN --------------------------- */
@@ -60,6 +116,8 @@ main {
 
 .hero {
     position: relative;
+    z-index: 1;
+
     video {
         width: 100%;
         height: auto;
@@ -71,23 +129,31 @@ main {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgb(0,0,0);
-        background: linear-gradient(180deg, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0) 90%);
-        > h2 {
-            font-size: 1.7rem;
-            margin: 1.5rem 0 0.3rem 0;
-        }
-        p {
-            padding-top: 0;
-            font-size: 1.2rem;
-            margin: 0.4rem 0;
-        }
-        > h2, p {
-            color: white;
-            padding-left: 1rem;
-        }
     }
 }// end hero
+
+.cards {
+    margin: 0 $gutter;
+
+     div {
+        margin: 0 auto;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+     }
+}
+
+.sponsors {
+    
+    .sponsor-images > img {
+        display: block;
+        width: 50%;
+        height: auto;
+    }
+}
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
@@ -96,6 +162,9 @@ main {
 
 footer {
     padding: 1rem $gutter;
-    text-align: center;
     line-height: $leading;
+
+    .phone-number, .copyright {
+        text-align: center;
+    }
 }// end footer

@@ -19,6 +19,10 @@
 	<header>
         <img src="images/logo1x.png" alt="logo">
 		<span>TITLE</span>
+        <div id="hamburgerBtn">
+            <span class="top"></span>
+            <span class="bottom"></span>
+        </div>
 	</header>
 </div><!-- end header wrapper -->
 
@@ -26,7 +30,7 @@
     
 <div id="navWrapper">
     <nav>
-        <ul>
+        <ul id="primaryNav">
             <li><a href="#">Clients</a></li>
             <li class="active"><a href="#">About</a></li>
             <li><a href="#">Careers</a></li>
@@ -93,6 +97,18 @@
                     <li>Google Hacking</li>
                 </ul>
             </div>
+
+            <div class="sponsors">
+                <h2>TITLE</h2>
+                <div class="sponsor-images">
+                    <img src="images/client-A.webp" alt="3M logo" width="150" height="50">
+                    <img src="images/client-B.webp" alt="cisco logo" width="150" height="50">
+                    <img src="images/client-C.webp" alt="google logo" width="150" height="50">
+                    <img src="images/client-D.webp" alt=" NBC logo" width="`150" height="50">
+                    <img src="images/client-E.webp" alt="chanel logo" width="150" height="50">
+                    <img src="images/client-F.webp" alt="microsoft logo" width="150" height="50">
+                </div>
+            </div>
         </div>
 
     </main>
@@ -100,10 +116,48 @@
     
 <div id="footerWrapper">
     <footer>
-        <p>Copyright &copy; 2025 Design Thinking Inc. All rights reserved. 
-            <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Clients</a></p>
+        <div class="phone-number">
+            <a href="tel:801-555-4823">801-555-4823</a>
+        </div>
+        <div class="adresses">
+            <div class="address-1">
+                <h3>COMPANY NAME</h3>
+                <address>
+                    900 Spectrum West Dr
+                    <br>
+                    Suite 432
+                    <br>
+                    Irvine, CA 92681
+                </address>
+            </div>
+            <div class="address-2">
+                <h3>COMPANY NAME</h3>
+                <address>
+                    29 East Infinity Loop
+                    <br>
+                    Suite 324
+                    <br>
+                    Albany, NY 63220
+                </address>
+            </div>
+            <div class="address-3">
+                <h3>COMPANY NAME</h3>
+                <address>
+                    3235 Westminister St
+                    <br>
+                    Suite 542
+                    <br>
+                    Houston, TX 065432
+                </address>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; <span id="year">x</span> &bull; Morgan Harris</p>
+        </div>
     </footer>
 </div> <!-- end footer wrapper -->
-   
+
+<script src="js/scripts.js"></script> 
+
 </body>
 </html> 

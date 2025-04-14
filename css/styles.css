@@ -321,7 +321,7 @@ body {
 /* --------------------------- HEADER --------------------------- */
 header {
   display: grid;
-  grid-template-columns: 50px auto;
+  grid-template-columns: 50px auto 44px;
   -moz-column-gap: 10px;
        column-gap: 10px;
   align-items: center;
@@ -332,6 +332,65 @@ header span {
 }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+#navWrapper {
+  background-color: white;
+}
+
+#hamburgerBtn {
+  position: relative;
+  height: 44px;
+  width: 44px;
+  cursor: pointer;
+}
+#hamburgerBtn .top, #hamburgerBtn .bottom {
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  left: 25%;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+#hamburgerBtn .top {
+  top: 33%;
+}
+#hamburgerBtn .bottom {
+  top: 62%;
+}
+
+#hamburgerBtn.open .top {
+  transform: rotate(45deg);
+  top: 48%;
+  width: 60%;
+  left: 20%;
+}
+#hamburgerBtn.open .bottom {
+  transform: rotate(-45deg);
+  top: 48%;
+  width: 60%;
+  left: 20%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+nav ul li a {
+  color: black;
+  display: block;
+  padding: 0.75rem 10px;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+}
+nav ul li.active a {
+  color: red;
+}
+
+nav ul.open {
+  display: block;
+}
+
 /* --------------------------- MAIN --------------------------- */
 main h1 {
   font-size: 1.5rem;
@@ -342,6 +401,7 @@ main p {
 
 .hero {
   position: relative;
+  z-index: 1;
 }
 .hero video {
   width: 100%;
@@ -353,21 +413,24 @@ main p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 30%, rgba(0, 0, 0, 0) 90%);
 }
-.hero div > h2 {
-  font-size: 1.7rem;
-  margin: 1.5rem 0 0.3rem 0;
+
+.cards {
+  margin: 0 10px;
 }
-.hero div p {
-  padding-top: 0;
-  font-size: 1.2rem;
-  margin: 0.4rem 0;
+.cards div {
+  margin: 0 auto;
 }
-.hero div > h2, .hero div p {
-  color: white;
-  padding-left: 1rem;
+.cards div img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sponsors .sponsor-images > img {
+  display: block;
+  width: 50%;
+  height: auto;
 }
 
 /* --------------------------- FOOTER --------------------------- */
@@ -377,12 +440,40 @@ main p {
 
 footer {
   padding: 1rem 10px;
-  text-align: center;
   line-height: 150%;
+}
+footer .phone-number, footer .copyright {
+  text-align: center;
 }
 
 @media only screen and (min-width: 35rem) {
-  /* NAVIGATION STUFF GOES HERE  */
+  #navWrapper {
+    position: relative;
+    z-index: 1000;
+  }
+  nav ul {
+    position: absolute;
+    right: 10px;
+    width: 200px;
+    border-radius: 5px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: white;
+  }
+  nav ul li a {
+    display: block;
+    padding: 0.75rem 10px;
+    text-decoration: none;
+  }
+  nav ul li.active a {
+    color: blue;
+  }
+  #primaryNav ul.open {
+    display: block;
+    z-index: 1;
+  }
 }
 @media only screen and (min-width: 64rem) {
   header, nav, main {

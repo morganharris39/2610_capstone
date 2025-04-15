@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -313,27 +314,39 @@ html {
 
 /* --------------------------- BODY --------------------------- */
 body {
-  font-family: "Spline Sans", sans-serif;
-  font-weight: 300;
   min-width: 320px;
+  background-color: #FFF7EA;
+  color: #1F1F1F;
+}
+
+.league-spartan-bold {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* --------------------------- HEADER --------------------------- */
 header {
   display: grid;
-  grid-template-columns: 50px auto 44px;
+  grid-template-columns: 60px auto 44px;
   -moz-column-gap: 10px;
        column-gap: 10px;
-  align-items: center;
+  align-items: flex-end;
   padding: 0.5rem 10px;
 }
 header span {
-  font-size: 1.6rem;
+  font-size: 28px;
 }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
-  background-color: white;
+  background-color: #FFF7EA;
 }
 
 #hamburgerBtn {
@@ -347,7 +360,7 @@ header span {
   height: 3px;
   width: 50%;
   left: 25%;
-  background-color: black;
+  background-color: #1F1F1F;
   transition: all 0.3s ease;
 }
 #hamburgerBtn .top {
@@ -377,14 +390,17 @@ nav ul {
   display: none;
 }
 nav ul li a {
-  color: black;
+  color: #1F1F1F;
   display: block;
   padding: 0.75rem 10px;
   text-decoration: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #EBDEC7;
+  text-align: right;
 }
 nav ul li.active a {
-  color: red;
+  color: #7D1E7B;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 nav ul.open {
@@ -393,15 +409,33 @@ nav ul.open {
 
 /* --------------------------- MAIN --------------------------- */
 main h1 {
-  font-size: 1.5rem;
+  font-size: 36px;
+}
+main h2 {
+  font-size: 32px;
+}
+main h3 {
+  font-size: 28px;
 }
 main p {
   line-height: 150%;
 }
 
+.page-title {
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+}
+.page-title h1, .page-title p {
+  margin: 0 0 0.3rem 0;
+}
+.page-title p {
+  font-size: 18px;
+}
+
 .hero {
   position: relative;
   z-index: 1;
+  margin-bottom: 4rem;
 }
 .hero video {
   width: 100%;
@@ -414,39 +448,117 @@ main p {
   right: 0;
   bottom: 0;
 }
+.hero div h2 {
+  font-size: 20px;
+  text-align: right;
+  margin: 0.5rem 10px 0 9rem;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.2px);
+  -webkit-backdrop-filter: blur(10.2px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+}
 
 .cards {
   margin: 0 10px;
 }
-.cards div {
-  margin: 0 auto;
+.cards h2 {
+  text-align: center;
 }
-.cards div img {
+.cards .card {
+  margin: 1rem auto;
+  padding-bottom: 1rem;
+  background-color: #F4C678;
+  border-radius: 5px;
+  box-shadow: 0 1px 7px #a9823d;
+}
+.cards .card h3 {
+  text-align: center;
+  background-color: #FA564F;
+  margin: 0;
+  padding: 1rem 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.cards .card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.cards .card ul {
+  margin-top: 1.5rem;
+  list-style-type: "◾";
+}
+.cards .card ul li {
+  line-height: 2rem;
+}
+
+.sponsors {
+  padding: 2rem 0 4rem 0;
+}
+.sponsors h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.sponsors .sponsor-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+  row-gap: 6rem;
+  margin: 0 2rem;
+}
+.sponsors .sponsor-images img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.sponsors .sponsor-images > img {
-  display: block;
-  width: 50%;
-  height: auto;
-}
-
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  background-color: grey;
+  background-color: #0F0A3F;
 }
 
 footer {
   padding: 1rem 10px;
   line-height: 150%;
+  color: #FFF7EA;
+}
+footer .phone-number {
+  font-size: 24px;
+}
+footer .phone-number a {
+  color: #FFF7EA;
+  text-decoration: none;
+}
+footer .addresses {
+  padding: 3rem 0;
+}
+footer .addresses .address {
+  padding-bottom: 2rem;
+}
+footer .addresses .address h3 {
+  margin: 0;
+  padding-bottom: 0.2rem;
+}
+footer .addresses .address address {
+  margin-left: 0.5rem;
+}
+footer .copyright {
+  font-size: 18px;
 }
 footer .phone-number, footer .copyright {
   text-align: center;
 }
+footer .phone-number, footer .copyright {
+  padding: 1rem 0;
+}
 
 @media only screen and (min-width: 35rem) {
+  /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
   #navWrapper {
     position: relative;
     z-index: 1000;
@@ -456,7 +568,6 @@ footer .phone-number, footer .copyright {
     right: 10px;
     width: 200px;
     border-radius: 5px;
-    text-align: right;
     margin: 0;
     padding: 0;
     display: none;
@@ -474,6 +585,7 @@ footer .phone-number, footer .copyright {
     display: block;
     z-index: 1;
   }
+  /* --------------------------- MAIN --------------------------- */
 }
 @media only screen and (min-width: 64rem) {
   header, nav, main {

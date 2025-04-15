@@ -1,3 +1,5 @@
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
 #navWrapper {
     position: relative;
     z-index: 1000;
@@ -8,7 +10,6 @@ nav ul {
     right: $gutter;
     width: 200px;
     border-radius: 5px;
-    text-align: right;
     margin: 0;
     padding: 0;
     display: none;
@@ -29,3 +30,7 @@ nav ul {
     display: block;
     z-index: 1;
 } // end opened nav
+
+
+/* --------------------------- MAIN --------------------------- */
+

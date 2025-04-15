@@ -14,21 +14,33 @@ html {
 
 /* --------------------------- BODY --------------------------- */
 body {
-    font-family: $defaultFont;
-    font-weight: $lightWeight;
     min-width: 320px;
+    background-color: $backgroundColor;
+    color: $fontColor;
 }
 
+.league-spartan-bold {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 /* --------------------------- HEADER --------------------------- */
 header {
     display: grid;
-    grid-template-columns: 50px auto 44px;
+    grid-template-columns: 60px auto 44px;
     column-gap: $gutter;
-    align-items: center;
+    align-items: flex-end;
     padding: .5rem $gutter;
     span {
-        font-size: 1.6rem;
+        font-size: 28px;
     }
 } // end header
 
@@ -36,7 +48,7 @@ header {
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 
 #navWrapper {
-    background-color: white;
+    background-color: $backgroundColor;
 }
 
 #hamburgerBtn {
@@ -50,7 +62,7 @@ header {
         height: 3px;
         width: 50%;
         left: 25%;
-        background-color: black;
+        background-color: $fontColor;
         transition: all .3s ease;
     }
 
@@ -87,15 +99,18 @@ nav ul {
     display: none;
 
     li a {
-        color: black;
+        color: $fontColor;
         display: block;
         padding: 0.75rem $gutter;
         text-decoration: none;
-        border-bottom: 1px solid $greyColor;
+        border-bottom: 1px solid $lineColor;
+        text-align: right;
     }
 
     li.active a {
-        color: red;
+        color: $navActiveColor;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
     }
 } // end nav
 
@@ -107,16 +122,39 @@ nav ul.open {
 /* --------------------------- MAIN --------------------------- */
 main {
     h1 {
-        font-size: 1.5rem;
+        font-size: 36px;
     }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
     p {
         line-height: $leading;
     }
 }// end main
 
+.page-title {
+    text-align: center;
+    margin: 3rem 0 1rem 0;
+
+    h1, p {
+        margin: 0 0 0.3rem 0;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
 .hero {
     position: relative;
     z-index: 1;
+    margin-bottom: 4rem;
 
     video {
         width: 100%;
@@ -129,42 +167,133 @@ main {
         left: 0;
         right: 0;
         bottom: 0;
+
+        h2 {
+            font-size: 20px;
+            text-align: right;
+            margin: 0.5rem $gutter 0 9rem;
+
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10.2px);
+            -webkit-backdrop-filter: blur(10.2px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.5rem;
+        }
     }
 }// end hero
 
 .cards {
     margin: 0 $gutter;
 
-     div {
-        margin: 0 auto;
+    h2 {
+        text-align: center;
+    }
+
+     .card {
+        margin: 1rem auto;
+        padding-bottom: 1rem;
+        background-color: $cardColor;
+        border-radius: 5px;
+        box-shadow: 0 1px 7px darken($lineColor, 40%);
+
+        h3 {
+            text-align: center;
+            background-color: $titleColor;
+            margin: 0;
+            padding: 1rem 0;
+
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
 
         img {
             display: block;
             width: 100%;
             height: auto;
         }
+        
+        ul {
+            margin-top: 1.5rem;
+            list-style-type: "\25FE";
+
+            li {
+                line-height: 2rem;
+            }
+        }
      }
 }
 
 .sponsors {
-    
-    .sponsor-images > img {
-        display: block;
-        width: 50%;
-        height: auto;
+    padding: 2rem 0 4rem 0;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .sponsor-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4rem;
+        row-gap: 6rem;
+        margin: 0 2rem;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-    background-color: grey;
+    background-color: $footerColor;
 } // end footer wrapper
 
 footer {
     padding: 1rem $gutter;
     line-height: $leading;
+    color: $backgroundColor;
+
+    .phone-number {
+        font-size: 24px;
+
+        a {
+            color: $backgroundColor;
+            text-decoration: none;
+        }
+    }
+
+    .addresses {
+        padding: 3rem 0;
+
+        .address {
+            padding-bottom: 2rem;
+            
+            h3 {
+                margin: 0;
+                padding-bottom: 0.2rem;
+            }
+
+            address {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 18px;
+    }
 
     .phone-number, .copyright {
         text-align: center;
+    }
+
+    .phone-number, .copyright {
+        padding: 1rem 0;
     }
 }// end footer

@@ -413,6 +413,7 @@ main h1 {
 }
 main h2 {
   font-size: 32px;
+  text-align: center;
 }
 main h3 {
   font-size: 28px;
@@ -444,14 +445,15 @@ main p {
 .hero div {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1;
   right: 0;
   bottom: 0;
 }
 .hero div h2 {
   font-size: 20px;
   text-align: right;
-  margin: 0.5rem 10px 0 9rem;
+  margin: 0.5rem 10px;
+  width: 175px;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
@@ -465,15 +467,12 @@ main p {
 .cards {
   margin: 0 10px;
 }
-.cards h2 {
-  text-align: center;
-}
 .cards .card {
   margin: 1rem auto;
   padding-bottom: 1rem;
   background-color: #F4C678;
   border-radius: 5px;
-  box-shadow: 0 1px 7px #a9823d;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.3);
 }
 .cards .card h3 {
   text-align: center;
@@ -498,10 +497,6 @@ main p {
 
 .sponsors {
   padding: 2rem 0 4rem 0;
-}
-.sponsors h2 {
-  text-align: center;
-  margin-bottom: 4rem;
 }
 .sponsors .sponsor-images {
   display: grid;
@@ -571,21 +566,41 @@ footer .phone-number, footer .copyright {
     margin: 0;
     padding: 0;
     display: none;
-    background-color: white;
+    background-color: #FFF7EA;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.3);
   }
   nav ul li a {
     display: block;
     padding: 0.75rem 10px;
     text-decoration: none;
   }
-  nav ul li.active a {
-    color: blue;
-  }
   #primaryNav ul.open {
     display: block;
     z-index: 1;
   }
   /* --------------------------- MAIN --------------------------- */
+  .hero div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .hero div h2 {
+    font-size: 24px;
+    text-align: left;
+    width: 150px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .cards .card {
+    margin: 1rem;
+  }
+  .sponsors .sponsors-images {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 @media only screen and (min-width: 64rem) {
   header, nav, main {

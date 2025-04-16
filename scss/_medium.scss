@@ -13,7 +13,9 @@ nav ul {
     margin: 0;
     padding: 0;
     display: none;
-    background-color: white;
+    background-color: $backgroundColor;
+    
+    box-shadow: 0 1px 7px rgba(0,0,0,0.3);
 
     li a {
         display: block;
@@ -21,9 +23,6 @@ nav ul {
         text-decoration: none;
     }
     
-    li.active a {
-        color: blue;
-    }
 } // end unordered
 
 #primaryNav ul.open {
@@ -34,3 +33,35 @@ nav ul {
 
 /* --------------------------- MAIN --------------------------- */
 
+.hero {
+
+    div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        h2 {
+            font-size: 24px;
+            text-align: left;
+            width: 150px;
+        }
+    }
+}// end hero
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+     .card {
+        margin: 1rem;
+     }
+}
+
+.sponsors {
+
+    .sponsors-images {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

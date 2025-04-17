@@ -1,5 +1,5 @@
 header, nav, main {
-    max-width: 960px;
+    max-width: 1400px;
     margin: auto;
 }
 
@@ -37,52 +37,54 @@ nav ul, nav ul.open {
 
 /* --------------------------- MAIN --------------------------- */
 
+main {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .sub-text {
+        font-size: 20px;
+    }
+}// end main
+
 .hero {
 
     div {
-        bottom: auto;
+        top: 87%;
         left: 0;
+        // bottom: 1;
 
         h2 {
             font-size: 28px;
-            width: 400px;
+            width: 650px;
         }
     }
 }// end hero
 
 .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-     .card {
-        margin: 1rem;
-     }
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.sponsors {
-
-    .sponsor-images {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        img {
-            flex-basis: 50px;
-        }
-    }
-}
 
 /* --------------------------- FOOTER --------------------------- */
 
 footer {
 
-    .addresses {
-        margin: 0 5rem;
+    .phone-number {
 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-basis: 66%;
-        gap: 4rem;
+        a:hover {
+            color: darken($backgroundColor, 10%);
+        }
+    }
+
+    .addresses {
+
+        .address {
+            margin: 0 6rem;
+        }
     }
 }// end footer

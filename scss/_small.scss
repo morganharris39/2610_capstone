@@ -33,6 +33,12 @@ body {
   
 
 /* --------------------------- HEADER --------------------------- */
+
+#headerWrapper {
+    position: relative;
+    z-index: 2;
+}
+
 header {
     display: grid;
     grid-template-columns: 60px auto 44px;
@@ -50,6 +56,9 @@ header {
 
 #navWrapper {
     background-color: $backgroundColor;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
 }
 
 #hamburgerBtn {
@@ -93,11 +102,14 @@ header {
     }
 }
 
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: none;
+
+    overflow: hidden;
 
     li a {
         color: $fontColor;
@@ -167,7 +179,7 @@ main {
         top: 0;
         left: 1;
         right: 0;
-        bottom: 0;
+        margin: auto 0;
 
         h2 {
             font-size: 20px;

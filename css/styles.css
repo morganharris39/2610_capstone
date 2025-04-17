@@ -332,6 +332,11 @@ body {
 }
 
 /* --------------------------- HEADER --------------------------- */
+#headerWrapper {
+  position: relative;
+  z-index: 2;
+}
+
 header {
   display: grid;
   grid-template-columns: 60px auto 44px;
@@ -347,6 +352,9 @@ header span {
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
   background-color: #FFF7EA;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
 }
 
 #hamburgerBtn {
@@ -388,6 +396,7 @@ nav ul {
   margin: 0;
   padding: 0;
   display: none;
+  overflow: hidden;
 }
 nav ul li a {
   color: #1F1F1F;
@@ -446,7 +455,7 @@ main p {
   top: 0;
   left: 1;
   right: 0;
-  bottom: 0;
+  margin: auto 0;
 }
 .hero div h2 {
   font-size: 20px;
@@ -613,7 +622,7 @@ footer .phone-number, footer .copyright {
 }
 @media only screen and (min-width: 64rem) {
   header, nav, main {
-    max-width: 960px;
+    max-width: 1400px;
     margin: auto;
   }
   /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
@@ -641,36 +650,31 @@ footer .phone-number, footer .copyright {
     color: #B23F61;
   }
   /* --------------------------- MAIN --------------------------- */
+  main h1 {
+    font-size: 48px;
+  }
+  main h2 {
+    font-size: 36px;
+  }
+  main .sub-text {
+    font-size: 20px;
+  }
   .hero div {
-    bottom: auto;
+    top: 87%;
     left: 0;
   }
   .hero div h2 {
     font-size: 28px;
-    width: 400px;
+    width: 650px;
   }
   .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .cards .card {
-    margin: 1rem;
-  }
-  .sponsors .sponsor-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .sponsors .sponsor-images img {
-    flex-basis: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   /* --------------------------- FOOTER --------------------------- */
-  footer .addresses {
-    margin: 0 5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-basis: 66%;
-    gap: 4rem;
+  footer .phone-number a:hover {
+    color: #ffe4b7;
+  }
+  footer .addresses .address {
+    margin: 0 6rem;
   }
 }

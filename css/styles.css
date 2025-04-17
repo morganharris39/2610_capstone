@@ -453,9 +453,8 @@ main p {
 .hero div {
   position: absolute;
   top: 0;
-  left: 1;
+  left: 0;
   right: 0;
-  margin: auto 0;
 }
 .hero div h2 {
   font-size: 20px;
@@ -661,7 +660,6 @@ footer .phone-number, footer .copyright {
   }
   .hero div {
     top: 87%;
-    left: 0;
   }
   .hero div h2 {
     font-size: 28px;

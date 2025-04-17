@@ -39,6 +39,7 @@ header {
     column-gap: $gutter;
     align-items: flex-end;
     padding: .5rem $gutter;
+
     span {
         font-size: 28px;
     }
@@ -109,8 +110,6 @@ nav ul {
 
     li.active a {
         color: $navActiveColor;
-        text-decoration: underline;
-        text-decoration-thickness: 3px;
     }
 } // end nav
 
@@ -128,6 +127,7 @@ main {
     h2 {
         font-size: 32px;
         text-align: center;
+        margin-top: 6rem;
     }
 
     h3 {
@@ -225,7 +225,7 @@ main {
 }
 
 .sponsors {
-    padding: 2rem 0 4rem 0;
+    padding: 2rem 0 6rem 0;
 
     .sponsor-images {
         display: grid;

@@ -3,4 +3,86 @@ header, nav, main {
     margin: auto;
 }
 
-/* NAVIGATION STUFF GOES HERE  */
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+#hamburgerBtn {
+    display: none;
+}
+
+nav ul, nav ul.open {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    position: static;
+    border: none;
+    box-shadow: none;
+
+    li a {
+        padding: 0.4rem 1rem;
+        border: none;
+    }
+
+    li.active a {
+        color: $navActiveColor;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+
+    a:hover, .active a:hover {
+        color: $hoverColor;
+    }
+
+} // end ul
+
+
+/* --------------------------- MAIN --------------------------- */
+
+.hero {
+
+    div {
+        bottom: auto;
+        left: 0;
+
+        h2 {
+            font-size: 28px;
+            width: 400px;
+        }
+    }
+}// end hero
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+     .card {
+        margin: 1rem;
+     }
+}
+
+.sponsors {
+
+    .sponsor-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img {
+            flex-basis: 50px;
+        }
+    }
+}
+
+/* --------------------------- FOOTER --------------------------- */
+
+footer {
+
+    .addresses {
+        margin: 0 5rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-basis: 66%;
+        gap: 4rem;
+    }
+}// end footer

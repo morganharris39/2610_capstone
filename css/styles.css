@@ -399,8 +399,6 @@ nav ul li a {
 }
 nav ul li.active a {
   color: #7D1E7B;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
 }
 
 nav ul.open {
@@ -414,6 +412,7 @@ main h1 {
 main h2 {
   font-size: 32px;
   text-align: center;
+  margin-top: 6rem;
 }
 main h3 {
   font-size: 28px;
@@ -496,7 +495,7 @@ main p {
 }
 
 .sponsors {
-  padding: 2rem 0 4rem 0;
+  padding: 2rem 0 6rem 0;
 }
 .sponsors .sponsor-images {
   display: grid;
@@ -580,11 +579,7 @@ footer .phone-number, footer .copyright {
   }
   /* --------------------------- MAIN --------------------------- */
   .hero div {
-    position: absolute;
-    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
   }
   .hero div h2 {
     font-size: 24px;
@@ -598,8 +593,22 @@ footer .phone-number, footer .copyright {
   .cards .card {
     margin: 1rem;
   }
-  .sponsors .sponsors-images {
-    grid-template-columns: 1fr 1fr 1fr;
+  .sponsors .sponsor-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sponsors .sponsor-images img {
+    flex-basis: 50px;
+  }
+  /* --------------------------- FOOTER --------------------------- */
+  footer .addresses {
+    margin: 0 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 66%;
+    gap: 4rem;
   }
 }
 @media only screen and (min-width: 64rem) {
@@ -607,5 +616,61 @@ footer .phone-number, footer .copyright {
     max-width: 960px;
     margin: auto;
   }
-  /* NAVIGATION STUFF GOES HERE  */
+  /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+  #hamburgerBtn {
+    display: none;
+  }
+  nav ul, nav ul.open {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    position: static;
+    border: none;
+    box-shadow: none;
+  }
+  nav ul li a, nav ul.open li a {
+    padding: 0.4rem 1rem;
+    border: none;
+  }
+  nav ul li.active a, nav ul.open li.active a {
+    color: #7D1E7B;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+  }
+  nav ul a:hover, nav ul .active a:hover, nav ul.open a:hover, nav ul.open .active a:hover {
+    color: #B23F61;
+  }
+  /* --------------------------- MAIN --------------------------- */
+  .hero div {
+    bottom: auto;
+    left: 0;
+  }
+  .hero div h2 {
+    font-size: 28px;
+    width: 400px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .cards .card {
+    margin: 1rem;
+  }
+  .sponsors .sponsor-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sponsors .sponsor-images img {
+    flex-basis: 50px;
+  }
+  /* --------------------------- FOOTER --------------------------- */
+  footer .addresses {
+    margin: 0 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 66%;
+    gap: 4rem;
+  }
 }

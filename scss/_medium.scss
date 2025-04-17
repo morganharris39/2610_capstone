@@ -36,11 +36,7 @@ nav ul {
 .hero {
 
     div {
-        position: absolute;
-        top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
 
         h2 {
             font-size: 24px;
@@ -61,7 +57,28 @@ nav ul {
 
 .sponsors {
 
-    .sponsors-images {
-        grid-template-columns: 1fr 1fr 1fr;
+    .sponsor-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img {
+            flex-basis: 50px;
+        }
     }
 }
+
+/* --------------------------- FOOTER --------------------------- */
+
+footer {
+
+    .addresses {
+        margin: 0 5rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-basis: 66%;
+        gap: 4rem;
+    }
+}// end footer
